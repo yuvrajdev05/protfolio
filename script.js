@@ -93,16 +93,12 @@ function type() {
     setTimeout(type, typeSpeed);
 }
 
-// 6. Scroll Reveal & Skill Bar Animation
+// 6. Scroll Reveal Refined
 const observerOptions = { threshold: 0.1 };
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             entry.target.classList.add('reveal');
-            const progress = entry.target.querySelector('.skill-progress');
-            if (progress) {
-                progress.style.width = progress.getAttribute('data-width');
-            }
         }
     });
 }, observerOptions);
@@ -112,7 +108,38 @@ document.querySelectorAll('section, .card-glass').forEach(el => {
     observer.observe(el);
 });
 
-// 7. Parallax Background Refined
+// 7. Premium 3D Tilt & Spotlight Effect
+const cards = document.querySelectorAll('.card-glass, .skill-card-tiny');
+
+cards.forEach(card => {
+    card.addEventListener('mousemove', (e) => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+
+        // Spotlight effect
+        card.style.setProperty('--x', `${x}px`);
+        card.style.setProperty('--y', `${y}px`);
+
+        // 3D Tilt effect
+        if (card.hasAttribute('data-tilt')) {
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+            const rotateX = (y - centerY) / 10;
+            const rotateY = (centerX - x) / 10;
+
+            card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.05)`;
+        }
+    });
+
+    card.addEventListener('mouseleave', () => {
+        if (card.hasAttribute('data-tilt')) {
+            card.style.transform = `perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1)`;
+        }
+    });
+});
+
+// 8. Parallax Background Refined
 window.addEventListener('scroll', () => {
     const scrolled = window.pageYOffset;
     const hero = document.getElementById('home');
@@ -124,7 +151,7 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// 8. Form submission handler
+// 9. Form submission handler
 const contactForm = document.getElementById('contact-form');
 if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
