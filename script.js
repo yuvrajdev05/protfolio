@@ -150,19 +150,3 @@ window.addEventListener('scroll', () => {
         if (p) p.style.transform = `translateY(${scrolled * 0.15}px)`;
     }
 });
-
-// 9. Form submission handler
-const contactForm = document.getElementById('contact-form');
-if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        const btn = contactForm.querySelector('button');
-        const originalText = btn.innerText;
-        btn.innerText = 'Sending...';
-        setTimeout(() => {
-            alert('Thank you! Your message has been received.');
-            btn.innerText = originalText;
-            contactForm.reset();
-        }, 1500);
-    });
-}
