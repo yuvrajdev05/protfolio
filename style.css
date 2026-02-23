@@ -487,16 +487,76 @@ nav ul li a:hover {
 /* Skills Grid */
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 24px;
+    margin-top: 40px;
+}
+
+.skill-item {
+    padding: 30px !important;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 24px !important;
+}
+
+.skill-icon-box {
+    width: 60px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: var(--accent-primary);
+    transition: var(--transition-smooth);
+    border: 1px solid var(--card-border);
+}
+
+[data-theme="light"] .skill-icon-box {
+    background: rgba(99, 102, 241, 0.05);
+}
+
+.skill-item:hover {
+    transform: translateY(-8px);
+    background: rgba(99, 102, 241, 0.05);
+    border-color: var(--accent-primary);
+}
+
+.skill-item:hover .skill-icon-box {
+    transform: scale(1.1) rotate(5deg);
+    background: var(--accent-gradient);
+    color: #fff;
+    box-shadow: 0 10px 20px rgba(99, 102, 241, 0.3);
+}
+
+.skill-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0;
+    font-weight: 600;
 }
 
 .skill-bar {
+    height: 8px;
     background: rgba(255, 255, 255, 0.1);
+    border-radius: 100px;
+    overflow: hidden;
+    position: relative;
 }
 
 [data-theme="light"] .skill-bar {
     background: rgba(0, 0, 0, 0.05);
+}
+
+.skill-progress {
+    height: 100%;
+    background: var(--accent-gradient);
+    width: 0;
+    border-radius: 100px;
+    transition: width 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 0 15px rgba(99, 102, 241, 0.5);
 }
 
 /* Certificates Marquee */
