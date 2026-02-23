@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yuvraj Dev | Portfolio</title>
+    <meta name="description" content="Personal portfolio of Yuvraj Dev, a modern web developer.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Loading Screen -->
+    <div id="loader">
+        <div class="loader-content">
+            <div class="loader-logo">
+                <img src="profile/my_pic.jpeg" alt="Logo">
+            </div>
+            <div class="loader-spinner"></div>
+        </div>
+    </div>
+
+    <!-- Cursor Glow -->
+    <div id="cursor-glow"></div>
+
+    <div id="scroll-progress"></div>
+    <header>
+        <div class="logo">
+            <img src="profile/my_pic.jpeg" alt="Logo" class="nav-logo">
+            <span>Yuvraj.Dev</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#certificates">Certificates</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li>
+                    <button id="theme-toggle" aria-label="Toggle Theme">
+                        <svg class="sun" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m12.728 0l-.707-.707M6.343 6.343l-.707-.707M12 8a4 4 0 100 8 4 4 0 000-8z">
+                            </path>
+                        </svg>
+                        <svg class="moon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M20.354 15.354A9 9 0 118.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z">
+                            </path>
+                        </svg>
+                    </button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home">
+            <h1>Hi, I'm <span id="typing-text"></span></h1>
+            <p>A passionate developer focused on building clean, modern, and user-friendly web experiences.</p>
+            <div class="hero-btns">
+                <a href="#projects" class="btn">View My Work</a>
+                <a href="Resume_.pdf" download="Resume_Yuvraj_Dev.pdf" class="btn btn-secondary">
+                    <svg style="width: 20px; height: 20px; vertical-align: middle; margin-right: 8px;"
+                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="7 10 12 15 17 10"></polyline>
+                        <line x1="12" y1="15" x2="12" y2="3"></line>
+                    </svg>
+                    Download Resume
+                </a>
+                <div class="social-links">
+                    <a href="https://github.com/yuvrajdev05" target="_blank" class="social-btn" aria-label="GitHub">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path
+                                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                            </path>
+                        </svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/yuvrajdev05" target="_blank" class="social-btn"
+                        aria-label="LinkedIn">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
+                            </path>
+                            <rect x="2" y="9" width="4" height="12"></rect>
+                            <circle cx="4" cy="4" r="2"></circle>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about">
+            <h2>About Me</h2>
+            <div class="about-content card-glass">
+                <div class="about-image">
+                    <img src="profile/my_pic.jpeg" alt="Yuvraj Dev">
+                </div>
+                <div class="about-text">
+                    <p>I am a dedicated web developer with a keen eye for design and performance. My journey in tech is
+                        driven by curiosity and a desire to create impactful digital solutions. I specialize in crafting
+                        responsive interfaces and robust backend systems.</p>
+                    <br>
+                    <p>When I'm not coding, you can find me exploring new technologies, contributing to open-source
+                        projects, or sharing my knowledge with the developer community.</p>
+                </div>
+                <!-- Floating Tech Stack -->
+                <div class="tech-stack">
+                    <div class="tech-icon floating" style="--delay: 0s">⚡</div>
+                    <div class="tech-icon floating" style="--delay: 1s">⚛️</div>
+                    <div class="tech-icon floating" style="--delay: 2s">🎨</div>
+                    <div class="tech-icon floating" style="--delay: 0.5s">🚀</div>
+                    <div class="tech-icon floating" style="--delay: 1.5s">🛠️</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects">
+            <h2>Featured Projects</h2>
+            <div class="project-grid">
+                <div class="project-card card-glass">
+                    <div class="project-img">
+                        <img src="Project/project1.jpeg" alt="E-commerce Dashboard">
+                    </div>
+                    <div class="project-content">
+                        <h3>Simple calculator</h3>
+                        <p>Just completed a Simple Calculator Web App using HTML, CSS & JavaScript!
+                            This project helped me strengthen my fundamentals in DOM manipulation, CSS styling, layout
+                            design, and event handling.</p>
+                    </div>
+                </div>
+                <div class="project-card card-glass">
+                    <div class="project-img">
+                        <img src="Project/project2.jpeg" alt="AI Analytics Platform">
+                    </div>
+                    <div class="project-content">
+                        <h3>Tic Tac Toe</h3>
+                        <p>I recently built a Tic Tac Toe web game using HTML, CSS, and JavaScript.
+                            This project helped me practice DOM manipulation, event handling, UI designing, and basic
+                            game logic implementation.</p>
+                    </div>
+                </div>
+                <div class="project-card card-glass">
+                    <div class="project-img">
+                        <img src="Project/project3.jpg" alt="Creative Portfolio Design">
+                    </div>
+                    <div class="project-content">
+                        <h3>Smart Farmer Support Platform</h3>
+                        <p>🌾 Smart Farmer Support Platform
+                            I developed a Smart Farmer Support Platform designed to assist farmers with crop analysis
+                            and real-time support using a simple and user-friendly interface</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills">
+            <h2>My Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-item card-glass">
+                    <div class="skill-info">
+                        <span>Frontend Development</span>
+                        <span>90%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-width="90%"></div>
+                    </div>
+                </div>
+                <div class="skill-item card-glass">
+                    <div class="skill-info">
+                        <span>JavaScript / React</span>
+                        <span>85%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-width="85%"></div>
+                    </div>
+                </div>
+                <div class="skill-item card-glass">
+                    <div class="skill-info">
+                        <span>UI/UX Design</span>
+                        <span>75%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-width="75%"></div>
+                    </div>
+                </div>
+                <div class="skill-item card-glass">
+                    <div class="skill-info">
+                        <span>Backend / Node.js</span>
+                        <span>80%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-width="80%"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications Section -->
+        <section id="certificates">
+            <h2>Certifications & Participation</h2>
+            <div class="marquee card-glass">
+                <div class="marquee-content">
+                    <div class="cert-item"><img src="certificate/cert1.jpeg" alt="Unstop Certificate"></div>
+                    <div class="cert-item"><img src="certificate/cert2.jpeg" alt="SnowStorm Hackathon"></div>
+                    <div class="cert-item"><img src="certificate/cert3.jpeg" alt="Ideathon 1.0"></div>
+                    <div class="cert-item"><img src="certificate/cert4.jpeg" alt="Poster Making"></div>
+                    <div class="cert-item"><img src="certificate/cert5.jpeg" alt="ML & AI Workshop"></div>
+                    <!-- Duplicate for infinite scroll -->
+                    <div class="cert-item"><img src="certificate/cert1.jpeg" alt="Unstop Certificate"></div>
+                    <div class="cert-item"><img src="certificate/cert2.jpeg" alt="SnowStorm Hackathon"></div>
+                    <div class="cert-item"><img src="certificate/cert3.jpeg" alt="Ideathon 1.0"></div>
+                    <div class="cert-item"><img src="certificate/cert4.jpeg" alt="Poster Making"></div>
+                    <div class="cert-item"><img src="certificate/cert5.jpeg" alt="ML & AI Workshop"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2>Get In Touch</h2>
+            <div class="contact-container">
+                <div class="contact-info card-glass">
+                    <div class="info-item">
+                        <div class="info-icon">📞</div>
+                        <div class="info-text">
+                            <h4>Phone</h4>
+                            <p>+91 6395990760</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">✉️</div>
+                        <div class="info-text">
+                            <h4>Email</h4>
+                            <p>yuvrajdev05@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+                <form id="contact-form" class="card-glass">
+                    <div class="form-group">
+                        <input type="text" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea rows="5" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">Yuvraj.Dev</div>
+            <p>&copy; 2026 Yuvraj Dev. Crafted with ❤️ and passion.</p>
+            <div class="footer-socials">
+                <a href="https://github.com/yuvrajdev05" target="_blank">GH</a>
+                <a href="https://www.linkedin.com/in/yuvrajdev05" target="_blank">LI</a>
+                <a href="mailto:yuvrajdev05@gmail.com">EM</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button id="back-to-top" aria-label="Back to Top">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M18 15l-6-6-6 6"></path>
+        </svg>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

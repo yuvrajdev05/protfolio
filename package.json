@@ -1,0 +1,16 @@
+{
+  "name": "yuvraj-dev-portfolio",
+  "version": "1.0.0",
+  "description": "Premium personal portfolio for Yuvraj Dev",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx browser-sync start --server --files '*.html, *.css, *.js'"
+  },
+  "keywords": [
+    "portfolio",
+    "web-developer",
+    "premium-design"
+  ],
+  "author": "Yuvraj Dev",
+  "license": "ISC"
+}
