@@ -695,6 +695,8 @@ nav ul li a:hover {
     border-radius: 32px !important;
     transition: var(--transition-smooth);
     background: rgba(255, 255, 255, 0.02) !important;
+    text-decoration: none;
+    color: inherit;
 }
 
 .contact-card:hover {
